@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0"
-    xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    
-  <servlet>
-    <servlet-name>HomePageAction</servlet-name>
-    <servlet-class>servlet.HomePageAction</servlet-class>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+version="4.0">
+ <display-name>SearchEngine</display-name>
+	 <servlet>
+    <servlet-name>searchAction</servlet-name>
+    <servlet-class>servlet.searchAction</servlet-class>
   </servlet>
   
-  <servlet-mapping>
-  	<servlet-name>HomePageAction</servlet-name>
+   <servlet-mapping>
+  	<servlet-name>searchAction</servlet-name>
   	<url-pattern>/loginAction.do</url-pattern>
   </servlet-mapping>
+  
+  <!-- /loginAction.do是虚拟路径 -->
 
   <servlet-mapping>
-    <servlet-name>HomePageAction</servlet-name>
-    <url-pattern>/servlet/HomePageAction</url-pattern>
+    <servlet-name>searchAction</servlet-name>
+    <url-pattern>/servlet/searchAction</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>
-  	<welcome-file>index.jsp</welcome-file>
+  	<welcome-file>index1.jsp</welcome-file>
   </welcome-file-list>
 
 </web-app>
